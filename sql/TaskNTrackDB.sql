@@ -10,8 +10,17 @@ GO
 CREATE TABLE Sessions (
     Username NVARCHAR(100),
     SessionName NVARCHAR(100),
+    Role NVARCHAR(100),        
     Budget FLOAT,
     PRIMARY KEY (Username, SessionName)
+);
+GO
+
+-- Users Table (for login/registration)
+CREATE TABLE Users (
+    Username NVARCHAR(100) PRIMARY KEY,
+    Password NVARCHAR(100),
+    SecurityAnswer NVARCHAR(200)
 );
 GO
 
